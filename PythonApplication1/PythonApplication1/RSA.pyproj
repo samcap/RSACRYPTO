@@ -5,12 +5,12 @@
     <ProjectGuid>be63f767-1f6a-440c-bd65-0aa0e10b8244</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>KeySetup.py</StartupFile>
+    <StartupFile>Decrption.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>KeySetup</Name>
+    <Name>RSA</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -22,6 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Decrption.py" />
+    <Compile Include="Encryption.py" />
     <Compile Include="KeySetup.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
