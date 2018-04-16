@@ -3,7 +3,14 @@ import KeySetup
 import Encryption
 
 def Decrypt():
-    
+    d = GetPrivateKey()
+    n = Encryption.GetPubKey()
+    c = GetCipher()
+
+    DecryptedCipher = []
+    for i in range(len(c)):
+        DecryptedCipher.append(KeySetup.ModExponentiation(c[i],d,n[0]))
+    return DecryptedCipher
 
 def GetPrivateKey():
 
@@ -60,8 +67,12 @@ def Decode(s):
                 count += 1
 
     return(message)
-
+KeySetup.GenerateKeys()
+Encryption.Encrypt()
 cipher = Decrypt()
-print(cipher)
+#print (42641692713047080249**10420173041487488909 % 49561425417192294953)
+#print(KeySetup.ModExponentiation(42641692713047080249,10420173041487488909,49561425417192294953))
+print (cipher)
+print(Decode(cipher))
 
 

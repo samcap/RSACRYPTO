@@ -2,6 +2,7 @@ import re
 import math
 import KeySetup
 
+
 def GetPubKey():
 
     file = open("public_key","r")
@@ -39,7 +40,7 @@ def Encode(pt):
     m = 0
     start = False
     for i in range(length):
-        if i % 82 != 0 or i == 0:
+        if i % 7 != 0 or i == 0:
             if not start:
                 m += ord(pt[i])
                 start = True
@@ -53,7 +54,9 @@ def Encode(pt):
             exp = 1
             start = False
     s.append(m)
+    print(s)
     return s
+
 
 def Encrypt():
 
@@ -63,20 +66,16 @@ def Encrypt():
     ciphertext = []
 
     for i in range(len(k)):
-        c = KeySetup.ModExponentiation(k[i],pubkey[0],pubkey[1])
+        c = KeySetup.ModExponentiation(k[i],pubkey[1],pubkey[0])
         ciphertext.append(c)
 
     file = open("ciphertext","+w")
+    
     file.write('{}'.format(ciphertext))
     file.close()
 
 
-             
-def main():
 
-   Encrypt()
 
-   
-main()
 
 

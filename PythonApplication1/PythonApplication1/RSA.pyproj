@@ -5,7 +5,7 @@
     <ProjectGuid>be63f767-1f6a-440c-bd65-0aa0e10b8244</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Decrption.py</StartupFile>
+    <StartupFile>Decryption(1).py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +22,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Decrption.py" />
+    <Compile Include="Decryption%281%29.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Encryption.py" />
     <Compile Include="KeySetup.py" />
   </ItemGroup>

@@ -1,4 +1,5 @@
 from random import randrange
+
 #############################################################################################
 # Modular Exponentiation Algorithm in python
 #
@@ -12,7 +13,7 @@ def ModExponentiation(x,a,n):
 
    while e > 0:
        if e % 2 == 0:
-           e = e/2
+           e = e//2
            c = (c * c) % n
        else:
            e = e-1
@@ -35,7 +36,7 @@ def FermatsTest(n):
         return False
 
     #run test 50 times
-    for i in range (50):
+    for i in range (300):
         #compute random a for testing
         a = randrange(1,n-1)
 
